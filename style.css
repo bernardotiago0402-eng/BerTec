@@ -1,0 +1,404 @@
+
+:root {
+    --azul-escuro: #07152e;
+    --azul: #1769ff;
+    --azul-claro: #eaf1ff;
+    --branco: #ffffff;
+    --texto: #26344b;
+    --cinzento: #68758a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecalho {
+    min-height: 82px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--branco);
+    gap: 24px;
+}
+
+.logotipo {
+    color: var(--azul-escuro);
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logotipo span,
+.destaque h1 span {
+    color: var(--azul);
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navegacao a {
+    color: var(--azul-escuro);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navegacao a:hover {
+    color: var(--azul);
+}
+
+.navegacao .link-contacto {
+    background: var(--azul);
+    color: var(--branco);
+    padding: 11px 19px;
+    border-radius: 7px;
+}
+
+.botao-menu {
+    display: none;
+}
+
+.destaque {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 90px 7%;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.etiqueta {
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.destaque .etiqueta {
+    color: #8fb6ff;
+}
+
+.destaque h1 {
+    font-size: clamp(36px, 4.5vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+    max-width: 650px;
+}
+
+.descricao {
+    color: #c5cede;
+    max-width: 520px;
+    margin-top: 24px;
+    font-size: 17px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.principal {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.principal:hover {
+    background: #0754dc;
+}
+
+.secundario {
+    color: var(--branco);
+    border: 1px solid #53617a;
+}
+
+.ilustracao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border: 1px solid #31517f;
+    background: radial-gradient(circle, #17386b, #0b1c38 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 80px #1769ff25;
+}
+
+.simbolo {
+    font-size: 82px;
+    font-weight: 900;
+    letter-spacing: -8px;
+}
+
+.simbolo span {
+    color: #6ca2ff;
+}
+
+.circulo p {
+    color: #bdcde8;
+    font-size: 13px;
+}
+
+.linha-tecnologica {
+    position: absolute;
+    width: 110%;
+    height: 1px;
+    background: #31517f;
+    transform: rotate(-35deg);
+}
+
+.ponto {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #64a0ff;
+    box-shadow: 0 0 15px #64a0ff;
+}
+
+.ponto-um {
+    top: 35px;
+    right: 50px;
+}
+
+.ponto-dois {
+    bottom: 45px;
+    left: 28px;
+}
+
+.ponto-tres {
+    top: 125px;
+    right: 5px;
+}
+
+.secao-servicos {
+    padding: 85px 7%;
+    background: #f7f9fc;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2,
+.sobre h2,
+.contactos h2 {
+    color: var(--azul-escuro);
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.2;
+}
+
+.titulo-secao > p:last-child {
+    margin-top: 12px;
+    color: var(--cinzento);
+}
+
+.grelha-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cartao {
+    background: var(--branco);
+    padding: 30px;
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #07152e10;
+}
+
+.icone {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: var(--azul-claro);
+    color: var(--azul);
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.cartao h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.cartao p,
+.sobre p,
+.contactos > p:not(.etiqueta) {
+    color: var(--cinzento);
+}
+
+.sobre {
+    padding: 75px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.sobre > div {
+    max-width: 650px;
+}
+
+.sobre h2 {
+    margin-bottom: 18px;
+}
+
+.sobre-claro {
+    display: block;
+    background: var(--azul-claro);
+}
+
+.sobre-claro p:last-child {
+    margin-top: 15px;
+    max-width: 700px;
+}
+
+.contactos {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.contactos > p:not(.etiqueta) {
+    margin: 18px auto 25px;
+    max-width: 600px;
+}
+
+.nota {
+    font-size: 12px;
+}
+
+.rodape {
+    background: var(--azul-escuro);
+    color: #c5cede;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.rodape .logotipo {
+    color: var(--branco);
+}
+
+@media (max-width: 850px) {
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .botao-menu {
+        display: block;
+        border: 0;
+        background: transparent;
+        color: var(--azul-escuro);
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navegacao {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+    }
+
+    .navegacao.aberto {
+        display: flex;
+    }
+
+    .navegacao a {
+        padding: 12px;
+    }
+
+    .destaque {
+        grid-template-columns: 1fr;
+        padding-top: 65px;
+        text-align: center;
+    }
+
+    .descricao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .circulo {
+        width: 230px;
+        height: 230px;
+    }
+
+    .grelha-cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+}
